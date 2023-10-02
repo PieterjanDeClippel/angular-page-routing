@@ -1,0 +1,12 @@
+<h1>Customers</h1>
+<table>
+    <tr *ngFor="let customer of customers">
+        <td>{{ customer.id }}</td>
+        <td><a [routerLink]='["/customers", customer.id]'>{{ customer.name }}</a></td>
+        <td>{{ customer.vatNumber }}</td>
+    </tr>
+</table>
+
+<!-- I added this -->
+<hr>
+<router-outlet></router-outlet>

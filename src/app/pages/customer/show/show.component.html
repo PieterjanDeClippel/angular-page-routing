@@ -1,0 +1,18 @@
+<ng-container *ngIf="customer">
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>{{ customer.id }}</td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>{{ customer.name }}</td>
+        </tr>
+        <tr>
+            <td>Vat number</td>
+            <td>{{ customer.vatNumber }}</td>
+        </tr>
+    </table>
+
+    <a [routerLink]='["/customers", customer.id, "edit"]'>Edit</a>
+</ng-container>
